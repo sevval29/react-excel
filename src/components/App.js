@@ -37,15 +37,23 @@ promise.then((d)=>{
   
   
   return (
-    <div> 
-    <input type="file" accept="xlsx , xls" multiple={false} onChange={(e)=> {
+    
+
+      <div className="container">
+        <div class="title">   <h2 > read excel file</h2></div>
+
+    <input className="input" type="file" accept="xlsx , xls" multiple={false}
+    
+    
+    onChange={(e)=> {
+      
       const file=e.target.files[0]
 
       readExcel(file)
     }}
      
     />
-    <table className="table">
+    <table className="table" border={1}>
       <thead>
         <tr>
           <th scope="col">Movie</th>
